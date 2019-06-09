@@ -9,7 +9,7 @@ fn main() {
     println!("Your sale price is {}", sale_price(original_price));
 }
 
-fn sale_price(price: i32) -> {
+fn sale_price(price: i32) -> i32 {
     if is_even(price) {
         price - 10
     } else {
@@ -20,23 +20,6 @@ fn sale_price(price: i32) -> {
 fn is_even(num: i32) -> bool {
     num % 2 == 0
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // The error message points to line 12 and says it expects a type after the

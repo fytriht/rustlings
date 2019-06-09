@@ -2,7 +2,7 @@
 // Make me compile! Scroll down for hints :)
 
 fn main() {
-    call_me();
+    call_me(3);
 }
 
 fn call_me(num: i32) {
@@ -10,32 +10,6 @@ fn call_me(num: i32) {
         println!("Ring! Call number {}", i + 1);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // This time, the function *declaration* is okay, but there's something wrong

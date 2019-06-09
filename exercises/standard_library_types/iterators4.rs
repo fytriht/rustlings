@@ -10,6 +10,7 @@ pub fn factorial(num: u64) -> u64 {
     // For the most fun don't use:
     // - recursion
     // Scroll down for hints.
+    (1..=num).into_iter().product()
 }
 
 #[cfg(test)]
@@ -30,29 +31,6 @@ mod tests {
         assert_eq!(24, factorial(4));
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // In an imperative language you might write a for loop to iterate through

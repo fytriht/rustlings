@@ -1,6 +1,11 @@
 // if1.rs
 
-pub fn bigger(a: i32, b:i32) -> i32 {
+pub fn bigger(a: i32, b: i32) -> i32 {
+    if a > b {
+        a
+    } else {
+        b
+    }
     // Complete this function to return the bigger number!
     // Do not use:
     // - return
@@ -24,29 +29,6 @@ mod tests {
         assert_eq!(42, bigger(32, 42));
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // It's possible to do this in one line if you would like!

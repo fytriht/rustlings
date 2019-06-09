@@ -9,12 +9,12 @@ use std::thread;
 
 fn main() {
     let numbers: Vec<_> = (0..100u32).collect();
-    let shared_numbers = // TODO
+    let shared_numbers = Arc::new(vec![1, 2, 3, 4, 5]);
     let mut joinhandles = Vec::new();
 
     for offset in 0..8 {
-        joinhandles.push(
-        thread::spawn(move || {
+        let child_numbers = Arc::clone(&shared_numbers);
+        joinhandles.push(thread::spawn(move || {
             let mut i = offset;
             let mut sum = 0;
             while i < child_numbers.len() {
@@ -28,24 +28,6 @@ fn main() {
         handle.join().unwrap();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Make `shared_numbers` be an `Arc` from the numbers vector. Then, in order
